@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import {Section,Header,List,Li} from './Statistics.styles'
 
 const Statistics = ({ title, stats }) => {
@@ -16,4 +16,8 @@ const Statistics = ({ title, stats }) => {
     </Section>
   );
 };
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  
+}
 export default Statistics;

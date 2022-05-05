@@ -1,4 +1,6 @@
 import {Span,Li} from './FriendListItem.styles'
+import PropTypes from 'prop-types';
+
 const FriendListItem = ({avatar,name,isOnline}) => {
     return <Li>
         <Span  style={
@@ -8,4 +10,10 @@ const FriendListItem = ({avatar,name,isOnline}) => {
         <p className="name">{name}</p>
 </Li>
 }
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+
+};
 export default FriendListItem;

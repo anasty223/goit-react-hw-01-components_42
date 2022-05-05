@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 import {Container,Thead,List,List2} from './TransactionHistory.styles';
 
 const TransactionHistory = ({ items }) => {
@@ -21,19 +21,15 @@ const TransactionHistory = ({ items }) => {
           </tr>
         ))}
       </tbody>
-      {/* <tbody>
-    <tr key={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-    <tr key={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-  </tbody> */}
-    </Container>
+        </Container>
   );
 };
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
+}
 export default TransactionHistory;
