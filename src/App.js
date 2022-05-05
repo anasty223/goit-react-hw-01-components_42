@@ -6,6 +6,8 @@ import data from "./data.json";
 import Statistics from "./component/Statistics/Statistics";
 import friends from "./friends.json";
 import FriendList from "./component/FriendList/FriendList";
+import TransactionHistory from "./component/TransactionHistory/TransactionHistory";
+import transactions from "./transactions.json";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </Container>
   );
 }
