@@ -2,6 +2,8 @@ import "./App.css";
 import { Container } from "./component/Container/Container";
 import Profile from "./component/Profile/Profile";
 import user from "./user.json";
+import data from "./data.json";
+import Statistics from "./component/Statistics/Statistics";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={data} />
     </Container>
   );
 }

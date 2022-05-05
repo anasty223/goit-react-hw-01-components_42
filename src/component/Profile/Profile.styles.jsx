@@ -11,7 +11,6 @@ export const Container = styled.div`
 `
 
 export const Image = styled.img`
-// background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 11rem;
