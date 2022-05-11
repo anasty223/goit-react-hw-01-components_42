@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import {Section,Header,List,Li} from './Statistics.styles'
+import { Section, Header, List, Li } from './Statistics.styles'
 
 const Statistics = ({ title, stats }) => {
   return (
     <Section>
-    <Header>  {title ?? <h3>{title}</h3>}</Header>
+        
+    {title && <Header>{title}</Header>}
       <List>
-        {stats.map((stat) => (
-          <Li key={stat.id}>
-            <span>{stat.label}</span>
-            <span>{stat.percentage}</span>
+        {stats.map(({ id, label, percentage }) => (
+          <Li key={id}>
+            <span>{label}</span>
+            <span>{percentage}</span>
           </Li>
         ))}
       </List>
@@ -18,6 +19,6 @@ const Statistics = ({ title, stats }) => {
 };
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-  
+
 }
 export default Statistics;

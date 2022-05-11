@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
  const Div = styled.div`
   padding: 4em;
@@ -9,5 +10,11 @@ import styled from 'styled-components';
 export function Container({ children }) {
   return <Div >{children}</Div>;
 }
-
+Container.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
+  
 export default Container;
